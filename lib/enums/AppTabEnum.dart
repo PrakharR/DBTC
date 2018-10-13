@@ -1,0 +1,1 @@
+enum AppTabEnum { home, profile }
