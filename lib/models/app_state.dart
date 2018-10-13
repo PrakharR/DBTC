@@ -9,5 +9,5 @@ class AppState {
   final Habit habit;
   final AppTabEnum activeTab;
 
-  AppState({this.user, this.habit, this.activeTab});
+  AppState({this.user, this.habit, this.activeTab = AppTabEnum.home});
 }

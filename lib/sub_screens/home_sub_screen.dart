@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:dbtc/presentation/Calendar.dart';
 
 class HomeSubScreen extends StatelessWidget {
   @override
@@ -12,7 +11,7 @@ class HomeSubScreen extends StatelessWidget {
         Row(
           children: <Widget>[Text('Why'), Text('Keeps me running')],
         ),
-        Expanded(child: Calendar()),
+        Expanded(child: Container()),
         Row(
           children: <Widget>[
             Row(
