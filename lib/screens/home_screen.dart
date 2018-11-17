@@ -4,6 +4,7 @@ import 'package:dbtc/models/app_state.dart';
 import 'package:dbtc/sub_screens/home_sub_screen.dart';
 import 'package:dbtc/sub_screens/profile_sub_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
@@ -14,6 +15,21 @@ class HomeScreen extends StatelessWidget {
     return ActiveTab(
         builder: (BuildContext context, AppTabEnum activeTab) {
           return Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0.0,
+              iconTheme: IconThemeData(color: Colors.black54),
+              actions: activeTab == AppTabEnum.home ?
+              <Widget>[] :
+              <Widget>[
+                IconButton(
+                    icon: Icon(Icons.settings),
+                    onPressed: () {
+                      // TODO: Launch settings page
+                    },
+                )
+              ],
+            ),
             body: activeTab == AppTabEnum.home ? HomeSubScreen() : ProfileSubScreen(),
             bottomNavigationBar: TabSelector(),
           );
